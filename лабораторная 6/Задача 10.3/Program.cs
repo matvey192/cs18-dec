@@ -14,18 +14,20 @@ namespace Задача_10._3
             int a = int.Parse(a1);
             string a2 = Console.ReadLine();
             int b = int.Parse(a2);
-            int x = a;
-            int x1 = b 
-            if (a<b)
+            int x= a ; //3 
+            int x1 = b; //10
+            while(x < b) //3 <=10
             {
-                Console.WriteLine(b + " " + a);
-                b--;
-                a++;
+                Console.WriteLine(x + " " +x1 );
+                x++;
+                x1--;
             }
-            else
-                Console.WriteLine(b+" " +a);
-            b++;
-            a--;
+            while (x1 <= a) //10<=3
+            {
+                Console.WriteLine(x + " " + x1);
+                x1++;
+                x--;
+            }
         }
     }
 }

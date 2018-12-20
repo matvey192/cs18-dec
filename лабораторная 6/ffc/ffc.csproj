@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{62BEE0CF-2D2E-4846-B954-7C2CDF6264B9}</ProjectGuid>
+    <ProjectGuid>{E242B031-9016-44AC-90FE-62035D2049AA}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Задача_12</RootNamespace>
-    <AssemblyName>Задача 12</AssemblyName>
+    <RootNamespace>ffc</RootNamespace>
+    <AssemblyName>ffc</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
