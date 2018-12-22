@@ -25,7 +25,6 @@ namespace Задача_22._3
                 Console.WriteLine(a);
                 a++;
             }
-            
         }
     }
 }
