@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace задача_31
+namespace Задача_33
 {
     class Program
     {
@@ -12,47 +12,56 @@ namespace задача_31
         {
             int s = int.Parse(Console.ReadLine());
             if (0 >= s || s >= 20) { Console.WriteLine("Значение W должно быть в интервале [0, 20]"); return; }
-            for(int i=0;i<=s;i++)
+            for (int i = 0; i <= s; i++)
             {
-                Console.Write("a");
+                Console.Write("0");
             }
             Console.WriteLine();
             for (int i = 0; i <= s; i++)
             {
-                Console.Write("b");
+                Console.Write("1");
             }
             Console.WriteLine();
             for (int i = 0; i <= s; i++)
             {
-                Console.Write("c");
+                Console.Write("2");
             }
             Console.WriteLine();
             for (int i = 0; i <= s; i++)
             {
-                Console.Write("d");
+                Console.Write("3");
             }
             Console.WriteLine();
             for (int i = 0; i <= s; i++)
             {
-                Console.Write("e");
+                Console.Write("4");
             }
             Console.WriteLine();
             for (int i = 0; i <= s; i++)
             {
-                Console.Write("f");
+                Console.Write("5");
             }
             Console.WriteLine();
             for (int i = 0; i <= s; i++)
             {
-                Console.Write("g");
+                Console.Write("6");
             }
             Console.WriteLine();
             for (int i = 0; i <= s; i++)
             {
-                Console.Write("h");
+                Console.Write("7");
+            }
+            Console.WriteLine();
+            for (int i = 0; i <= s; i++)
+            {
+                Console.Write("8");
+            }
+            Console.WriteLine();
+            for (int i = 0; i <= s; i++)
+            {
+                Console.Write("9");
             }
             Console.WriteLine();
         }
     }
 }
-
