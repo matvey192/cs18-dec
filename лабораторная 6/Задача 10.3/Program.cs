@@ -16,17 +16,23 @@ namespace Задача_10._3
             int b = int.Parse(a2);
             int x= a ; //3 
             int x1 = b; //10
-            while(x < b) //3 <=10
+            if (a < b)
             {
-                Console.WriteLine(x + " " +x1 );
-                x++;
-                x1--;
+                while (x <= b) //3 <=10
+                {
+                    Console.WriteLine(x + " " + x1);
+                    x++;
+                    x1--;
+                }
             }
-            while (x1 <= a) //10<=3
+            else
             {
-                Console.WriteLine(x + " " + x1);
-                x1++;
-                x--;
+                while (x1 <= a) //10<=3
+                {
+                    Console.WriteLine(x + " " + x1);
+                    x1++;
+                    x--;
+                }
             }
         }
     }

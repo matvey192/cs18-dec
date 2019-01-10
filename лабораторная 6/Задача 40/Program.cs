@@ -28,7 +28,7 @@ namespace Задача_40
                     }
                 }
             }
-            if (A > B) // убывание
+            else  
             {
                 while (a != B)
                 {

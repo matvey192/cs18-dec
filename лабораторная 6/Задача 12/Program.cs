@@ -14,7 +14,7 @@ namespace Задача_12
             int a = int.Parse(a1);
             if (a < -100 || a > 500) { Console.WriteLine("Значение A должно быть в интервале [-100, 500]"); return; }
             int sum=0;
-            while (-100<=a&&a<=500)
+            while (a<=500)
             {
                 
                 sum+=a;
