@@ -11,7 +11,16 @@ namespace Задача_12
         static void Main(string[] args)
         {
             int m = int.Parse(Console.ReadLine());
-
+            string b = Console.ReadLine();
+            string[] bill = b.Split(' ');
+            int i = 0;
+            while (i<bill.Length)
+            {
+                int[] chs = new int[bill.Length];
+                chs[i] = int.Parse(bill[i])*m;
+                Console.Write(chs[i]+" ");
+                i++;
+            }
         }
     }
 }
