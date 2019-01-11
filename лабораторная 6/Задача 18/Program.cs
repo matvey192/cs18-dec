@@ -12,10 +12,12 @@ namespace Задача_18
         {
             int a = 0;
             int b = 0;
+            int c = 0;
             do
             {
                 a = int.Parse(Console.ReadLine());
                 b =b + a;
+                c++;
             } while (a != 0);
             Console.WriteLine(b);
             int a1 = 0;
@@ -24,7 +26,7 @@ namespace Задача_18
             {
                 a1 = int.Parse(Console.ReadLine());
                 b1 = b1 + a1;
-                if (a1 == 0) { Console.WriteLine(b); return; }
+                if (a1 == 0) { Console.WriteLine(b+c); return; }
             }
         }
     }

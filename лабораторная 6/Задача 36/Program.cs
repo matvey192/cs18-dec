@@ -25,7 +25,7 @@ namespace Задача_36
                 int ee1 = 0;
                 Console.Write(ee);
                 for (; ee1 < w; ee1++) { Console.Write("."); }
-                if (w == ee1) { Console.Write("|"); Console.WriteLine(); }
+                if (w == ee1) { Console.WriteLine("|"); }
             }
             Console.Write(" ");
             for (int ee = 0; ee < w; ee++) { Console.Write("-"); }

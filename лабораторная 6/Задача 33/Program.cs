@@ -10,58 +10,15 @@ namespace Задача_33
     {
         static void Main(string[] args)
         {
-            int s = int.Parse(Console.ReadLine());
+            int s = int.Parse(Console.ReadLine()); 
+            int b = 0; 
             if (0 >= s || s >= 20) { Console.WriteLine("Значение W должно быть в интервале [0, 20]"); return; }
-            for (int i = 0; i <= s; i++)
+            for (int i = 0; i <= s; i++) 
             {
-                Console.Write("0");
+                if (i == s) { b++; Console.WriteLine(); i = 0; }
+                Console.Write(b); 
+                if (b == 10) { break; }
             }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("1");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("2");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("3");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("4");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("5");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("6");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("7");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("8");
-            }
-            Console.WriteLine();
-            for (int i = 0; i <= s; i++)
-            {
-                Console.Write("9");
-            }
-            Console.WriteLine();
         }
     }
 }
