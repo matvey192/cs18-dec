@@ -14,14 +14,16 @@ namespace Задача_22
             string b = Console.ReadLine();
             string[] bill = b.Split(';');
             int[] nums = new int[bill.Length]; // to int
+            if (b == "") { Console.WriteLine("Исходная строка пуста");return;  }
             while (i < bill.Length)
             {
                 nums[i] = int.Parse(bill[i]);
+                i++;
             }
             i = 0;
-            while (i < nums.Length)
+            while (i < nums.Length-1)
             {
-                if (nums[i] > nums[i+1]) { Console.WriteLine("Элемент со значением " + nums[i+1] + " на индексе" + i+1 + " нарушает закономерность");return; }
+                if (nums[i] > nums[i+1]) { Console.WriteLine("Элемент со значением " + nums[i+1] + " на индексе " + (i+1) + " нарушает закономерность");return; }
                 i++;
             }
             Console.WriteLine("Значения отсортированы по возрастанию");
