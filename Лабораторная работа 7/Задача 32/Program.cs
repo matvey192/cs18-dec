@@ -10,6 +10,8 @@ namespace Задача_32
     {
         static void Main(string[] args)
         {
+            int i = 0;
+            int z = 0;
             int c = 0;
             string k = Console.ReadLine();
             string[] cha = k.Split(' ');
@@ -22,10 +24,22 @@ namespace Задача_32
                 c++;
             }
             c = 0;
-            while(c<cha.Length)
+            i = chs[c];
+            while (c < chs.Length - 1)
             {
-                Console.Write(cha[c]);
+                if (i < chs[c + 1]) { i = chs[c + 1]; }
                 c++;
+            }
+            c = 0;
+            while (c<cha.Length)
+            {
+                if (chs[c] <=0) { Console.Write(" ");goto frr; }
+                Console.Write(cha[c]);
+                frr:
+                chs[c] = chs[c] - 1;
+                c++;
+                if (c == nums.Length) { Console.WriteLine();c = 0; z++; }
+                if (z == i) { break; }
             }
 
         }
