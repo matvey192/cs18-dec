@@ -21,22 +21,27 @@ namespace Задача_35_5
             }
             c = 0;
             int n = num.Length;
-            for (int i = 0, m = 0; i != n; i++, n = m) // 
+            for (int i = 0, m = 0; i != n; i++, n = m) //
             {
                 for (int j = m = i + 1; j != n; j++)
                 {
                     if (num[j] != num[i]) // 1 2 
                     {
-                        if (m != j) num[m] = num[j]; // 
-                        m++;
+                        if (m != j)
+                        {
+                            num[m] = num[j];
+                        }
+                        m++; // kol-vo razlichiy 
                     }
                 }
             }
             if (n != num.Length)
             {
                 int[] x = new int[num.Length];
-                for (int i = 0; i < n; i++) x[i] = num[i];
-
+                for (int i = 0; i < n; i++)
+                {
+                    x[i] = num[i];
+                }
                 num = x;
             }
             int bc = 0;

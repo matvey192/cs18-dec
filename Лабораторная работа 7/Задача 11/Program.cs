@@ -9,7 +9,7 @@ namespace Задача_11
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             string b = Console.ReadLine();
             int a = int.Parse(Console.ReadLine());
             string[] sim = b.Split(' ');
@@ -20,7 +20,7 @@ namespace Задача_11
                     sim[j] = sim[j - 1];//5 элемент становится 4-м
                 sim[0] = aLast; // по условию до 0 . первый элемент равен последнему 
             }
-            Console.WriteLine(String.Join(" ", sim));
+            Console.WriteLine(String.Join(" ", sim));  // ostatok % 
         }
     }
 }

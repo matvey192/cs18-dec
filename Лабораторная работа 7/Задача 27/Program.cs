@@ -31,7 +31,9 @@ namespace Задача_27
                 i++;
             }
             i = 0;
-            Console.Write("в массиве {"); while (i < bill.Length) { Console.Write(chs[i] + " ");i++; }
+            Console.Write("в массиве {");
+            while (i < bill.Length)
+            { Console.Write(chs[i] + " ");i++; }
             Console.WriteLine("}минимальный элемент это "+res);
         }
     }

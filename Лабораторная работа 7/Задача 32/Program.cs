@@ -14,7 +14,7 @@ namespace Задача_32
             int z = 0;
             int c = 0;
             string k = Console.ReadLine();
-            string[] cha = k.Split(' ');
+            string[] cha = k.Split(' '); // if
             string b = Console.ReadLine();
             string[] nums = b.Split(' ');
             int[] chs = new int[nums.Length];
@@ -33,9 +33,8 @@ namespace Задача_32
             c = 0;
             while (c<cha.Length)
             {
-                if (chs[c] <=0) { Console.Write(" ");goto frr; }
-                Console.Write(cha[c]);
-                frr:
+                if (chs[c] <=0) { Console.Write(" "); }
+                else { Console.Write(cha[c]); }
                 chs[c] = chs[c] - 1;
                 c++;
                 if (c == nums.Length) { Console.WriteLine();c = 0; z++; }

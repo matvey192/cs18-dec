@@ -13,7 +13,7 @@ namespace Задача_9
             string b = Console.ReadLine();
             int a = int.Parse(Console.ReadLine());
             string[] sim = b.Split(' ');
-            if (a < 1 || a > sim.Length) { Console.WriteLine("Количество позиций при сдвиге должно быть в интервале [1, длина массива)");return; }
+            if (a < 1 || a >= sim.Length) { Console.WriteLine("Количество позиций при сдвиге должно быть в интервале [1, длина массива)");return; }
             for (int i = 0; i < a; ++i)
             {
                 string aLast = sim[sim.Length - 1]; // последний элемент массива

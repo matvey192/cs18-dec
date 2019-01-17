@@ -12,13 +12,12 @@ namespace Задача_8
         {
             string b = Console.ReadLine();
             string[] sim = b.Split(' ');
-            for (int i = 0; i < 1; ++i)
+            string aLast = sim[sim.Length - 1]; // последний элемент массива
+            for (int j = sim.Length - 1; j > 0; j--) // пока не начало массива
             {
-                string aLast = sim[sim.Length - 1]; // последний элемент массива
-                for (int j = sim.Length - 1; j > 0; j--) // пока не начало массива
-                    sim[j] = sim[j - 1];//5 элемент становится 4-м
-                sim[0] = aLast; // по условию до 0 . первый элемент равен последнему 
+                sim[j] = sim[j - 1];//5 элемент становится 4-м
             }
+            sim[0] = aLast; // по условию до 0 . первый элемент равен последнему 
             Console.WriteLine(String.Join(" ", sim));
         }
     }

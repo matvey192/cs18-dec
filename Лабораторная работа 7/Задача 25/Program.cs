@@ -13,14 +13,16 @@ namespace Задача_25
             int i1 = 0;
             string b = Console.ReadLine();
             string[] bill = b.Split();
-            int i = bill.Length-1;
-            while (i >0)
+            int i = bill.Length - 1;
+            while (i > 0)
             {
                 while (i1 < bill.Length)
                 {
-                    if (i1==i) { goto brr; }
-                    if (bill[i] == bill[i1]) { Console.WriteLine("Повторения есть");return; }
-                    brr: // GOTO
+                    if (i1 != i && bill[i] == bill[i1])
+                    {
+                        Console.WriteLine("Повторения есть");
+                        return;
+                    }
                     i1++;
                 }
                 i1 = 0;
