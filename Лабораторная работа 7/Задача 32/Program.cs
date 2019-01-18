@@ -14,9 +14,13 @@ namespace Задача_32
             int z = 0;
             int c = 0;
             string k = Console.ReadLine();
-            string[] cha = k.Split(' '); // if
+            string[] cha = k.Split(' ');
+            if (k==""){ Console.WriteLine("Отсутствуют данные о символах");return; }
             string b = Console.ReadLine();
             string[] nums = b.Split(' ');
+            if (b == "") { Console.WriteLine("Отсутствуют данные о символах"); return; }
+            if (cha.Length > nums.Length || cha.Length < nums.Length)
+            { Console.WriteLine("Длины массивов не совпадают"); return; }
             int[] chs = new int[nums.Length];
             while (c < nums.Length)
             {

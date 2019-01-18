@@ -11,7 +11,7 @@ namespace Задача_19
         static void Main(string[] args)
         {
             string b = Console.ReadLine();
-            string[] bill = new string[] { "11", "12", "13", "14", "15", "16", "17", "18","19","20" };
+            string[] bill = new string[] { "11","13", "17","19", "10", "12", "14", "15", "16", "18", "20" };
             int i = 0;
             while (i < bill.Length)
             {
