@@ -14,27 +14,17 @@ namespace Задача_7
             if (t.Length != 13) { Console.WriteLine("Некорректная длина штрих-кода");return; }
             int i = 0;
             Console.Write("Код страны: ");
-            while (i<2)
-            {
-                Console.Write(t[i]);
-                i++;
-            }
-            i += 1;
-            Console.WriteLine();
+            string t1 = t;
+            t1 = t.Substring(0, 3);
+            Console.Write(t1); Console.WriteLine();
             Console.Write("Код изготовителя: ");
-            while (i < 6)
-            {
-                Console.Write(t[i]);
-                i++;
-            }
-            Console.WriteLine();
+            string t2 = t;
+            t2 = t.Substring(3, 3);
+            Console.Write(t2); Console.WriteLine();
             Console.Write("Код товара: ");
-            i += 1;
-            while (i < 11)
-            {
-                Console.Write(t[i]);
-                i++;
-            }
+            string t3 = t;
+            t3 = t.Substring(7, 4);
+            Console.Write(t3);
             Console.WriteLine();
             Console.WriteLine("Контрольное число: "+t[12]);
         }

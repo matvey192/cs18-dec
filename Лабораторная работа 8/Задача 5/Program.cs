@@ -10,27 +10,25 @@ namespace Задача_5
     {
         static void Main(string[] args)
         {
+            int i = 0;
             string str = "abcdefwxyz";
             int CA = int.Parse(Console.ReadLine());
-            if (CA > str.Length) { Console.WriteLine("Значение CA должно быть в интервале[0, длина строки)");return; }
-            int i = CA;
+            if (CA > str.Length||CA<0)
+            { Console.WriteLine("Значение CA должно быть в интервале[0, длина строки)");return; }
             int CB = int.Parse(Console.ReadLine());
-            if (CB > str.Length) { Console.WriteLine("Значение CB должно быть в интервале[0, длина строки)"); return; }
-            int i1 = CB;
-            while (i <= CB)
+            if  (CB > str.Length || CB < 0)
+            { Console.WriteLine("Значение CB должно быть в интервале[0, длина строки)"); return; }
+            if(CA > CB)
             {
-                char x = str[i];
-                Console.Write(x);
-                i++;
+                i = CA - CB + 1 ;
+                str = str.Substring(CB, i);
             }
-            if (i == CB+1) { return; }
-            while (CA >= i1)
+            else
             {
-                char x = str[i1];
-                Console.Write(x);
-                i1++;
+                i = CB - CA + 1;
+                str = str.Substring(CA, i);
             }
-            if (i1 == CA+1) { return; }
+            Console.WriteLine(str);
         }
     }
 }

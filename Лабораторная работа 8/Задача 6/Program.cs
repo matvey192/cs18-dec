@@ -12,25 +12,27 @@ namespace Задача_6
         {
             string text = "abcdefwxyz";
             string CA = Console.ReadLine();
-            if(text.IndexOf(CA)>text.Length|| text.IndexOf(CA) < text.Length)
-            { Console.WriteLine("Значение CA отсутствует в строке"); return; }
+            if (!text.Contains(CA))
+            { Console.WriteLine("Значение CA отсутствует в строке");return;  }
             int A = text.IndexOf(CA);
             string CB = Console.ReadLine();
-            if (text.IndexOf(CB) > text.Length || text.IndexOf(CB) < text.Length)
-            { Console.WriteLine("Значение CB отсутствует в строке"); return; }
+            if  (!text.Contains(CB))
+            { Console.WriteLine("Значение CB отсутствует в строке");return;  }
             int B = text.IndexOf(CB);
-            if (A < B) { A += 1; }
-            else { B += 1; }
-            while(A<B)
+            if (A < B)
             {
-                Console.Write(text[A]);
-                A++;
+                A += 1;
+                int i = B - A;
+                text = text.Substring(A,i);
             }
-            while (A > B)
+            else
             {
-                Console.Write(text[B]);
-                B++;
+                B += 1;
+                int i = A-B;
+                text = text.Substring(B,i); // index , num 
+               
             }
+            Console.WriteLine(text);
         }
     }
 }
