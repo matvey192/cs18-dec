@@ -13,6 +13,12 @@ namespace Задание_1
         {
             string s = Console.ReadLine();
             string ch = "task6175/test"+s+".txt"; // относительный 
+            string[] strok = File.ReadAllLines(ch);
+            if (strok.Length == 0)
+            {
+                Console.WriteLine("Файл пуст");
+                return;
+            }
             if (!File.Exists(ch)) // истино если  существует
             {
                 Console.WriteLine("File not found "+Path.GetFullPath(ch));  

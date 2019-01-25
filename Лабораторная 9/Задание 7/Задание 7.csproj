@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5156CD64-ECE7-45FF-9BD5-8E240AEF9B72}</ProjectGuid>
+    <ProjectGuid>{461AF22A-02CE-452E-A483-017429E02EA6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Задача_5</RootNamespace>
-    <AssemblyName>Задача 5</AssemblyName>
+    <RootNamespace>Задание_7</RootNamespace>
+    <AssemblyName>Задание 7</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,11 +50,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="task5537\test1.txt" />
-    <Content Include="task5537\test2.txt" />
-    <Content Include="task5537\test3.txt" />
-    <Content Include="task5537\test4.txt" />
-    <Content Include="task5537\test6.txt" />
+    <Content Include="task4769\test1.txt" />
+    <Content Include="task4769\test2.txt" />
+    <Content Include="task4769\test3.txt" />
+    <Content Include="task4769\test4.txt" />
+    <Content Include="task4769\test5.txt" />
+    <Content Include="task4769\test6.txt" />
+    <Content Include="task4769\test7.txt" />
+    <Content Include="task4769\test9.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

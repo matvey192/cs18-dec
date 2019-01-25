@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-namespace Задача_5
+namespace Задание_6
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int i = 3;
-            int i1 = 0;
+            Console.WriteLine("Номер файла");
             string s = Console.ReadLine();
-            string ch = "task5537/test" + s + ".txt";
+            Console.WriteLine("Символ");
+            string cc = Console.ReadLine();
+            string ch = "task5847/test" + s + ".txt";
             string[] strok = File.ReadAllLines(ch);
             if (strok.Length == 0)
             {
@@ -26,19 +27,11 @@ namespace Задача_5
                 return;
             }
             StreamReader sr = new StreamReader(ch);
-            while (!sr.EndOfStream)
-            {
-                string line = sr.ReadLine();
-                while (i != 0)
-                {
-                    Console.Write(line[i]);
-                    Console.Write(line[i - 1]);
-                    if (line[i] == line[i - 1]) { i1++; }
-                    i--;
-                }
-                i = 3;
-            }
-            Console.WriteLine(i1);
+            string line = sr.ReadLine();
+            if (!line.Contains(cc)) { Console.WriteLine("Указанная буква не найдена");return; }
+            int res = 0;
+            res = line.Length-1 - line.IndexOf(cc);
+            Console.WriteLine(res);
             sr.Close();
         }
     }
