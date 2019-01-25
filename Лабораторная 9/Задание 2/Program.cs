@@ -13,12 +13,6 @@ namespace Задание_2
         {
             string s = Console.ReadLine();
             string ch = "task4488/test" + s + ".txt"; // относительный 
-            string[] strok = File.ReadAllLines(ch);
-            if (strok.Length == 0)
-            {
-                Console.WriteLine("Файл пуст");
-                return;
-            }
             if (!File.Exists(ch)) // истино если существует
             {
                 Console.WriteLine("File not found " + Path.GetFullPath(ch));
@@ -26,9 +20,16 @@ namespace Задание_2
             } // File not foundC:\Users\adm\Desktop\cs18-dec\Лабораторная 9\Задание 1\bin\Debug\task6175\test13.txt
             // АБсолютный путь 
             StreamReader sr = new StreamReader(ch); // указываем на файл 
+            if (sr.EndOfStream) { Console.WriteLine("Файл пуст"); sr.Close(); return;  }
             String line = sr.ReadLine();
-            int count = File.ReadAllLines("task4488/test" + s + ".txt").Length;
-            Console.WriteLine(line+" "+(count-1));
+            Console.Write(line);
+            int count = 0;
+            while(!sr.EndOfStream)
+            {
+                String сс = sr.ReadLine();
+                count++;
+            }
+            Console.WriteLine(" "+count);
             sr.Close();
         }
     }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{59DDF575-175E-49CF-83F7-FA0DE920A5C8}</ProjectGuid>
+    <ProjectGuid>{B6DF48C3-7BA1-4DFE-B051-1D332BA90A7B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Задание_2</RootNamespace>
-    <AssemblyName>Задание 2</AssemblyName>
+    <RootNamespace>Задание_8</RootNamespace>
+    <AssemblyName>Задание 8</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,19 +50,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="task4488\test1.txt">
+    <Content Include="task9930\test1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test2.txt">
+    <Content Include="task9930\test2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test3.txt">
+    <Content Include="task9930\test3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test4.txt">
+    <Content Include="task9930\test5.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test6.txt">
+    <Content Include="task9930\test6.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

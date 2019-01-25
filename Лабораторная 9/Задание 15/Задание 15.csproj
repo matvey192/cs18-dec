@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{59DDF575-175E-49CF-83F7-FA0DE920A5C8}</ProjectGuid>
+    <ProjectGuid>{737875C3-BFC1-47CD-A485-D1B4592F4881}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Задание_2</RootNamespace>
-    <AssemblyName>Задание 2</AssemblyName>
+    <RootNamespace>Задание_15</RootNamespace>
+    <AssemblyName>Задание 15</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,21 +48,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="task3148\data0.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="task3148\data1.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="task3148\data2.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="task3148\data3.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="task3148\data4.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="task3148\data6.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="task3148\data7.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="task3148\data8.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="task4488\test1.txt">
+    <Content Include="task3148\list1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test2.txt">
+    <Content Include="task3148\list2.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test3.txt">
+    <Content Include="task3148\list3.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test4.txt">
+    <Content Include="task3148\list4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="task4488\test6.txt">
+    <Content Include="task3148\list6.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

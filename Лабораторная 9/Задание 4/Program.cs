@@ -10,6 +10,8 @@ namespace Задание_4
     {
         static void Main(string[] args)
         {
+            int count = 0;
+            int i = 0;
             string ss = "";
             string[] text;
             string s = Console.ReadLine();
@@ -21,14 +23,22 @@ namespace Задание_4
             } // File not foundC:\Users\adm\Desktop\cs18-dec\Лабораторная 9\Задание 1\bin\Debug\task6175\test13.txt
             // АБсолютный путь 
             StreamReader sr = new StreamReader(ch); // указываем на файл 
-            while (sr.EndOfStream != true)
+            while (!sr.EndOfStream)
             {
                 ss += sr.ReadLine();
+                text = ss.Split(' ');
+                while (i < text.Length)
+                {
+                    if (text[i] != "") { count++; }
+                    i++;
+                }
+                i = 0;
+                text = null;
+                ss = null; 
             }
-            text = ss.Split(' ');
             Console.WriteLine("Количество слов:");
-            Console.WriteLine(text.Length);
-            sr.Close(); /////////// 1 111111 1 1 1 1 11 1 1 1 1 1
+            Console.WriteLine(count);
+            sr.Close();
         }
     }
 }
