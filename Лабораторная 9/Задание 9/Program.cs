@@ -10,7 +10,6 @@ namespace Задание_9
     {
         static void Main(string[] args)
         {
-            int res = 0;
             string s = Console.ReadLine();
             string ch = "task6861/test" + s + ".txt";
             if (!File.Exists(ch)) // истино если существует
