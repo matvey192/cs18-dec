@@ -43,7 +43,17 @@ namespace CodeProject
             res = Math.Sqrt(1 - Math.Pow(Math.Sin(cR), 2));
             return res;
         }
-
+        public static string Task5662(int a, int b, int c)
+        {
+            string d = "";
+            double D;
+            D = Math.Pow(b, 2)-4*a*c;
+            if (a == 0) { d="Данное уравнение не является квадратным"; }
+            else if (D == 0) { d="Уравнение " + a + "x ^ 2 + " + b + "x + " + c + " = 0 имеет один корень "; }
+            else if (D > 0) {d = "У уравнения" + a + "x ^ 2 + " + b + "x + " + c + " = 0 два вещественных корня"; }
+            else if (D < 0) { d="Вещественных корней уравнения" + a + "x ^ 2 + " + b + "x + " + c +"= 0 нет"; }
+            return d;
+        }
         public static double task3946(int[] arr) //10
         {
             int i = 0;
