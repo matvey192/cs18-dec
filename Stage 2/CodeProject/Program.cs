@@ -8,13 +8,20 @@ namespace CodeProject
     class Program
     {
         static void Main(string[] args)
-        {
+        {//2
             Methods.task1860("Знаниям");
             Methods.task1860("Умениям");
             Methods.task1860("Результату");
             Methods.task4140("Бонд", "Джеймс");
             Methods.task4140("Джек Воробой", "Капитан");
             Methods.task4140("Крюков", "Алекснадр");
+            //3
+            Methods.task2632(50, 50, 40, "yellow");
+            Methods.task2632(400,300, 200 ,"green");
+            Methods.task2632(254,356 ,100,"#cc6600");
+            //4
+            Methods.task7474(1, 2, 3);
+            Methods.task7474(-3, 0, 2);
             double res;
             res = Methods.task4411(11.13);
             Console.WriteLine("{0:F4}",res);
