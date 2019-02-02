@@ -90,21 +90,61 @@ namespace Testing_Project
         [TestMethod]
         public void task5662()
         {
+            string d ;
             string res;
            res= Methods.Task5662(1, 2, 3);
-            Assert.AreEqual("Вещественных корней уравнения 1x ^ 2 + 2x + 3 = 0 нет", res);
+            d = "Вещественных корней уравнения1x ^ 2 + 2x + 3= 0 нет";
+            Assert.AreEqual(d, res);
             res=Methods.Task5662(11, 13, 19);
-            Assert.AreEqual("Вещественных корней уравнения 11x^2 + 13x + 19 = 0 нет", res);
+            d = "Вещественных корней уравнения11x ^ 2 + 13x + 19= 0 нет";
+            Assert.AreEqual(d, res);
             res =Methods.Task5662(3, 17, 5);
-            Assert.AreEqual("У уравнения 3x^2 + 17x + 5 = 0 два вещественных корня", res);
+            d = "У уравнения3x ^ 2 + 17x + 5 = 0 два вещественных корня";
+            Assert.AreEqual(d, res);
             res =Methods.Task5662(5, 31, 29);
-            Assert.AreEqual("У уравнения 5x^2 + 31x + 29 = 0 два вещественных корня", res);
+            d = "У уравнения5x ^ 2 + 31x + 29 = 0 два вещественных корня";
+            Assert.AreEqual(d, res);
             res =Methods.Task5662(3, 6, 3);
-            Assert.AreEqual("Уравнение 3x^2 + 6x + 3 = 0 имеет один корень", res);
+            d = "Уравнение 3x ^ 2 + 6x + 3 = 0 имеет один корень";
+            Assert.AreEqual(d, res);
             res =Methods.Task5662(1, 2, 1);
-            Assert.AreEqual("Уравнение 1x^2 + 2x + 1 = 0 имеет один корень", res);
+            d = "Уравнение 1x ^ 2 + 2x + 1 = 0 имеет один корень";
+            Assert.AreEqual(d, res);
             res =Methods.Task5662(0, 7, 13);
-            Assert.AreEqual("Данное уравнение не является квадратным", res);
+            d = "Данное уравнение не является квадратным";
+            Assert.AreEqual(d, res);
+        }
+        [TestMethod]
+        public void task3669()
+        {
+            long i = 0;
+            i = Methods.Task3669(8, 13);
+            Assert.AreEqual(1235520, i);
+            i = Methods.Task3669(13, 8);
+            Assert.AreEqual(1235520, i);
+            i = Methods.Task3669(159, 161);
+            Assert.AreEqual(4095840, i);
+            i = Methods.Task3669(648, 648);
+            Assert.AreEqual(648, i);
+            i = Methods.Task3669(-2, 600);
+            Assert.AreEqual(0, i);
+            i = Methods.Task3669(35, 24);
+            Assert.AreEqual(399703747322880000, i);
+        }
+        [TestMethod]
+        public void task1292()
+        {
+            string b = "";
+            b = Methods.Task1292("a");
+            Assert.AreEqual("a", b);
+            b = Methods.Task1292("b");
+            Assert.AreEqual("ab", b);
+            b = Methods.Task1292("d");
+            Assert.AreEqual("abcd", b);
+            b = Methods.Task1292("h");
+            Assert.AreEqual("abcdefgh", b);
+            b = Methods.Task1292("i");
+            Assert.AreEqual("abcdefgh", b);
         }
     }
 }

@@ -30,6 +30,19 @@ namespace CodeProject
             Console.WriteLine(Methods.Task5662(3, 6, 3));
             Console.WriteLine(Methods.Task5662(1, 2, 1));
             Console.WriteLine(Methods.Task5662(0, 7, 13));
+            //8
+            Console.WriteLine(Methods.Task3669(8,13));
+            Console.WriteLine(Methods.Task3669(13,8));
+            Console.WriteLine(Methods.Task3669(159,161));
+            Console.WriteLine(Methods.Task3669(648,648));
+            Console.WriteLine(Methods.Task3669(-2,600));
+            Console.WriteLine(Methods.Task3669(35,24));
+            //9
+            Console.WriteLine(Methods.Task1292("a"));
+            Console.WriteLine(Methods.Task1292("b"));
+            Console.WriteLine(Methods.Task1292("d"));
+            Console.WriteLine(Methods.Task1292("h"));
+            Console.WriteLine(Methods.Task1292("i"));
             double res;
             res = Methods.task4411(11.13);
             Console.WriteLine("{0:F4}", res);
