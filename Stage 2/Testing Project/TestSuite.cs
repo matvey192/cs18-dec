@@ -146,5 +146,17 @@ namespace Testing_Project
             b = Methods.Task1292("i");
             Assert.AreEqual("abcdefgh", b);
         }
+        public void task4283()
+        {
+            int res = 0;
+            res = Methods.task4283(3, new int[] { 1, 2, 3, 4, 1, 2 });
+            Assert.AreEqual(1, res);
+            res = Methods.task4283(5, new int[] { 1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3 });
+            Assert.AreEqual(0, res);
+            res = Methods.task4283(2, new int[] { 3, 2, 2, 2, 2, 2 });
+            Assert.AreEqual(5, res);
+            res = Methods.task4283(1, new int[] { 4, 4, 4, 4, 4, 4 });
+            Assert.AreEqual(0, res);
+        }
     }
 }

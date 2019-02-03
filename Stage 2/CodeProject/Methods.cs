@@ -106,7 +106,38 @@ namespace CodeProject
             return res;
         }
         //11
-
+        public static int task4283(int k, int[] arr)
+        {
+            int res = 0;
+            int i = 0;
+            while(i<arr.Length)
+            {
+                if (k == arr[i]) { res++; }
+                i++;
+            }
+            return res;
+        }
+        //12
+        public static double[] task6497(int[] arr)
+        {
+            int i = 0;
+            double[] res1 = new double[arr.Length]; 
+            double sr = 0;
+            while(i<arr.Length)
+            {
+                sr = arr[i] + sr;
+                i++;
+            }
+            sr = sr / arr.Length;
+            i = 0;
+            while(i<arr.Length)
+            {
+                if (arr[i] < sr) { res1[i] = sr - arr[i]; }
+                else { res1[i] = arr[i] - sr; }
+                i++;
+            }
+            return res1;
+        }
         public static void task9774(int x,int[] arr) // 13
         {
             int i = 0;
@@ -116,6 +147,7 @@ namespace CodeProject
                 i++;
             }
         }
+        //14 
         public static bool task4847(int x, int y , int c) // 15
         {
             bool res = x == y || x == c || y == c;
