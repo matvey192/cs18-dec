@@ -146,6 +146,7 @@ namespace Testing_Project
             b = Methods.Task1292("i");
             Assert.AreEqual("abcdefgh", b);
         }
+        [TestMethod]
         public void task4283()
         {
             int res = 0;
@@ -158,5 +159,50 @@ namespace Testing_Project
             res = Methods.task4283(1, new int[] { 4, 4, 4, 4, 4, 4 });
             Assert.AreEqual(0, res);
         }
+        //13/5
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9020assertion1()
+        {
+            Methods.Task9020(62);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9020assertion2()
+        {
+            Methods.Task9020(7573);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9020assertion3()
+        {
+            Methods.Task9020(75);
+        }
+        //13/6
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task5871assertion1()
+        {
+            Methods.Task5871(2);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task5871assertion2()
+        {
+            Methods.Task5871(0);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task5871assertion3()
+        {
+            Methods.Task5871(-4);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task5871assertion4()
+        {
+            Methods.Task5871(-20);
+        }
+        //
     }
 }

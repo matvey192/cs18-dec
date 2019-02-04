@@ -49,7 +49,7 @@ namespace CodeProject
             Console.WriteLine(Methods.task4283(2, new int[] { 3, 2, 2, 2, 2, 2 }));
             Console.WriteLine(Methods.task4283(1, new int[] { 4, 4, 4, 4, 4, 4 }));
             //12
-            double[] arr = new double[] { Methods.task6497(new int[] { 1, 2, 3, 4, 1, 2 })};
+            double[] arr = Methods.task6497(new int[] { 1, 2, 3, 4, 1, 2 });
 
         double res;
             res = Methods.task4411(11.13);
