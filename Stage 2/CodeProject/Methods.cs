@@ -189,5 +189,14 @@ namespace CodeProject
             }
             return (Math.Sqrt(x - 5) + Math.Sqrt(x + 5)) / 2 * Math.Sqrt(x);
         }
+        //13/7
+        public static double Task7799(int m, int deg)
+        {
+            if(m<=0)
+            {
+                throw new ArgumentException("Масса должна быть положительной");
+            }
+            return m * 9.8067 * Math.Cos(deg * Math.PI / 180);
+        }
     }
 }

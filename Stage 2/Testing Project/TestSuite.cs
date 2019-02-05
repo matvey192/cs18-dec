@@ -203,6 +203,18 @@ namespace Testing_Project
         {
             Methods.Task5871(-20);
         }
-        //
+        //13/7
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+       public void Task7799assertion1()
+        {
+            Methods.Task7799(0,45);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task7799assertion2()
+        {
+            Methods.Task7799(-10, 5);
+        }
     }
 }
