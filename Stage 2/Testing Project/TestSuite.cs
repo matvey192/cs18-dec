@@ -216,5 +216,25 @@ namespace Testing_Project
         {
             Methods.Task7799(-10, 5);
         }
+        //13/8
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9354assertion1()
+        {
+            Methods.Task9354(0,1,3);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task9354assertion2()
+        {
+            Methods.Task9354(0,1000,2000);
+        }
+        //13/9
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void Task5170assertion()
+        {
+            Methods.task5170(-10);
+        }
     }
 }

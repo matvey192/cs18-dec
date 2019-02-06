@@ -74,6 +74,8 @@ namespace CodeProject
             Console.WriteLine(res);
             res = Methods.task3946(new int[] { });
             Console.WriteLine(res);
+            //13/9
+            Console.WriteLine(Methods.task5170(9));
         }
     }
 }

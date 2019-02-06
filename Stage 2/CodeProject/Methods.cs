@@ -198,5 +198,25 @@ namespace CodeProject
             }
             return m * 9.8067 * Math.Cos(deg * Math.PI / 180);
         }
+        //13/8
+        public static double Task9354(int a, int b ,int c)
+        {
+            if (a == 0)
+            {
+                throw new ArgumentException(@"Уравнение y="+a+"x^2+"+b+"x+"+c+" не является квадратным");
+            }
+            return Math.Pow(b, 2) * 4 * a * c;
+        }
+        //13/9
+        public static bool task5170(int a )
+        {
+            if (a <= 0)
+            {
+                throw new ArgumentException("Значение Y должно быть положительным");
+            }
+            if (a == 2) { return true; }
+           else if (a % 2 == 0||a%3==0||a%5==0||a%7==0) { return false; }
+            else { return true; }
+        }
     }
 }
