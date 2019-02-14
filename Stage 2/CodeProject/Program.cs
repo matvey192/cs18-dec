@@ -51,7 +51,7 @@ namespace CodeProject
             //12
             double[] arr = Methods.task6497(new int[] { 1, 2, 3, 4, 1, 2 });
 
-        double res;
+            double res;
             res = Methods.task4411(11.13);
             Console.WriteLine("{0:F4}", res);
             res = Methods.task4411(-7919);
@@ -76,6 +76,15 @@ namespace CodeProject
             Console.WriteLine(res);
             //13/9
             Console.WriteLine(Methods.task5170(9));
+            //14 /55  
+            Console.WriteLine(Range.HasIntersection(2, 3, 5, 7));
+            Console.WriteLine(  Range.HasIntersection(11, 17, 13, 19));
+            Console.WriteLine(  Range.HasIntersection(23, 37, 29, 31));
+            Console.WriteLine( Range.HasIntersection(43, 53, 41, 47));
+            Console.WriteLine(  Range.HasIntersection(5, 15, 0, 30));
+            Console.WriteLine( Range.HasIntersection(67, 71, 59, 61));
+            Console.WriteLine(  Range.HasIntersection(79, 73, 83, 89));
+            Console.WriteLine(Range.HasIntersection(97 , 101, 107, 103));
         }
     }
 }
