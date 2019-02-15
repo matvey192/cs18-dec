@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="GeodesySuite.cs" />
     <Compile Include="PointSuite.cs" />
+    <Compile Include="RangeSuite.cs" />
     <Compile Include="TestSuite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
