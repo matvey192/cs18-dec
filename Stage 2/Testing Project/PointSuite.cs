@@ -35,5 +35,15 @@ namespace Testing_Project
             act = Point.distanceBetween1(src,dest);
             Assert.AreEqual(3.6056, act, 0.0001);
         }
+        [TestMethod]
+        public void distanceToValuesTest()
+        {
+            Point src;
+            src = new Point();
+            src.x = 1;
+            src.y = 1;
+            double res = src.distanceTo(3, 4);
+            Assert.AreEqual(3.6056, res, 0.0001);
+        }
     }
 }

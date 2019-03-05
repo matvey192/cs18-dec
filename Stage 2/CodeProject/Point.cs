@@ -20,5 +20,9 @@ namespace CodeProject
         {
             return Math.Sqrt(Math.Pow((b.x-a.x), 2) + Math.Pow((b.y-a.y), 2));
         }
+        public double distanceTo(int x, int y)
+        {
+            return Math.Sqrt(Math.Pow((x - this.x), 2) + Math.Pow((y - this.y), 2));
+        }
     }
 }

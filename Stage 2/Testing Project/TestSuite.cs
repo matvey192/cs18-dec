@@ -236,5 +236,19 @@ namespace Testing_Project
         {
             Methods.task5170(-10);
         }
+        //14.7
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void MixLiquidstest()
+        {
+
+            LiquidPortion a, b;
+            a = new LiquidPortion();
+            b = new LiquidPortion();
+            a.volume = -2;
+            b.volume = 5;
+            a.temperature = 10;
+            b.temperature = 50;
+        }
     }
 }

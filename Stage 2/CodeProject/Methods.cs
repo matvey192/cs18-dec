@@ -238,5 +238,18 @@ namespace CodeProject
             Res.distance = dis;
             return Res;
         }
+        //14.7
+        public static LiquidPortion MixLiquids(LiquidPortion a, LiquidPortion b)
+        {
+            int v = 0;
+            double temp = 0;
+            v = a.volume + b.volume;
+            temp = (a.volume * a.temperature + b.volume * a.temperature) / a.volume + b.volume;
+            LiquidPortion Res;
+            Res = new LiquidPortion();
+            Res.volume = v;
+            Res.temperature = temp;
+            return Res;
+        }
     }
 }
