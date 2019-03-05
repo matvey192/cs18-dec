@@ -223,15 +223,15 @@ namespace CodeProject
         {
             double dis;
             double ang = 0;
-            double x1 = b.x - a.x;
-            double y1 = b.y - a.y;
+            double x1 = b.GetX() - a.GetX();
+            double y1 = b.GetY() - a.GetY();
             double r =Math.Atan(Math.Abs(y1/x1));
             r = r / Math.PI * 180;
             if (x1 >= 0&&y1>0) { ang = r; }
             else if (x1 < 0 && y1 >= 0) { ang = 180-r; }
             else if (x1 <= 0 && y1 < 0) { ang = 180 + r; }
             else if (x1 > 0 && y1 <= 0) { ang = 360-r; }
-            dis = Math.Sqrt(Math.Pow((b.x - a.x), 2) + Math.Pow((b.y - a.y), 2));
+            dis = Math.Sqrt(Math.Pow((b.GetX() - a.GetX()), 2) + Math.Pow((b.GetY() - a.GetY()), 2));
             Direction Res;
             Res = new Direction();
             Res.angle = ang;
