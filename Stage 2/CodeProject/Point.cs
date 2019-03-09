@@ -45,8 +45,5 @@ namespace CodeProject
             if (a.x == b.x && a.y == b.y) { return true; }
             else return false;
         }
-        public bool Intersects(int a, int b)
-        {
-        }
     }
 }

@@ -7,6 +7,60 @@ namespace Testing_Project
     public class RangeSuite
     {
         [TestMethod]
+        public void IntersectsIntsTest()
+        {
+            bool res;
+            Range left = new Range();
+            left.from = 2;
+            left.to = 3;
+            res =left.Intersects(5,7);
+            Assert.IsFalse(res);
+
+            left.from = 11;
+            left.to = 17;
+            res = left.Intersects(13, 19);
+            Assert.IsTrue(res);
+
+            left.from = 23;
+            left.to = 37;
+            res = left.Intersects(29, 31);
+            Assert.IsTrue(res);
+
+            left.from = 43;
+            left.to = 53;
+            res = left.Intersects(41, 47);
+            Assert.IsTrue(res);
+
+            left.from = 5;
+            left.to = 15;
+            res = left.Intersects(0, 30);
+            Assert.IsTrue(res);
+
+            left.from = 67;
+            left.to = 71;
+            res = left.Intersects(59,61);
+            Assert.IsFalse(res);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void IntersectsIntWrongLeftTest1()
+        {
+            Range left = new Range();
+            left.from = 79;
+            left.to = 73;
+            left.Intersects(83,89);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void IntersectsIntWrongRightTest1()
+        {
+            Range left = new Range();
+            left.from = 97;
+            left.to = 101;
+            left.Intersects(107,103);
+        }
+
+        [TestMethod]
         public void HasIntersectionRangesTest()
         {
             bool res;
@@ -55,6 +109,8 @@ namespace Testing_Project
             res = Range.HasIntersection(left, right);
             Assert.IsFalse(res);
         }
+
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void IntersectsIntWrongLeftTest()
@@ -68,6 +124,7 @@ namespace Testing_Project
             right.to = 89;
             Range.HasIntersection(left, right);
         }
+
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
         public void IntersectsIntWrongRightTest()
