@@ -76,15 +76,6 @@ namespace CodeProject
             Console.WriteLine(res);
             //13/9
             Console.WriteLine(Methods.task5170(9));
-            //14 /55  
-            Console.WriteLine(Range.HasIntersection(2, 3, 5, 7));
-            Console.WriteLine(  Range.HasIntersection(11, 17, 13, 19));
-            Console.WriteLine(  Range.HasIntersection(23, 37, 29, 31));
-            Console.WriteLine( Range.HasIntersection(43, 53, 41, 47));
-            Console.WriteLine(  Range.HasIntersection(5, 15, 0, 30));
-            Console.WriteLine( Range.HasIntersection(67, 71, 59, 61));
-            Console.WriteLine(  Range.HasIntersection(79, 73, 83, 89));
-            Console.WriteLine(Range.HasIntersection(97 , 101, 107, 103));
         }
     }
 }

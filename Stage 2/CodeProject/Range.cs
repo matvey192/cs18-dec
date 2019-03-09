@@ -6,34 +6,42 @@ using System.Threading.Tasks;
 
 namespace CodeProject
 {
-   public class Range
+    public class Range
     {
-       public static bool HasIntersection(int la , int lb , int ra , int rb)
+        public int from;
+        public int to;
+        public static bool HasIntersection(Range a, Range b)
         {
-            int a = la;
-            int b = ra;
-            if (la < ra)
+            int i = 0;
+            int kx;
+            int min;
+            if (a.from>a.to||b.from>b.to)
             {
-                while (a < lb)
+                throw new ArgumentException("Подкоренное выражение должно быть неотрицательно");
+            }
+            if (a.from < b.from)
+            {
+                min = a.to - a.from;
+                kx = a.from;
+                while (i <= min)
                 {
-                    if (a == ra || a == rb) { return true; }
-                    a++;
+                    if (kx == b.from) { return true; }
+                    kx++;
+                    i++;
                 }
             }
-            else if (ra < la)
+            else if (b.from < a.from)
             {
-                while (b < rb)
+                min = b.to - b.from;
+                kx = b.from;
+                while (i <= min)
                 {
-                    if (b == la || b == lb) { return true; }
-                    b++;
+                    if (kx == a.from) { return true; }
+                    kx++;
+                    i++;
                 }
             }
-            else if (la > lb || ra > rb)
-            {
-                Console.WriteLine("Значение A должно быть меньше значения B");
-                return false; 
-            }
-             return false; 
+            return false;
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace CodeProject
 {
     public class Point
@@ -45,6 +44,9 @@ namespace CodeProject
         {
             if (a.x == b.x && a.y == b.y) { return true; }
             else return false;
+        }
+        public bool Intersects(int a, int b)
+        {
         }
     }
 }

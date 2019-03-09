@@ -16,7 +16,7 @@ namespace Lab13Task7740
                 x = x + 7;
                 Console.WriteLine("{0:F4}", x);
             }
-            catch(FormatException ex)
+            catch(FormatException )
             {
                 Console.WriteLine("Не удалось преобразовать строку в число");
             }

@@ -26,7 +26,7 @@ namespace Lab13Task1439
                         k++;
                     }
                 }
-                catch (FormatException ex)
+                catch (FormatException )
                 {
                     Console.WriteLine("Элемент № " + i + "со значением " + cw[i] + "не число");
                 }
