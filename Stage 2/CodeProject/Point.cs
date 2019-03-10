@@ -10,6 +10,11 @@ namespace CodeProject
         //1
         private double x;
         private double y;
+        public override bool Equals(object other)
+        {
+            if (this == other) return true;
+            return false;
+        }
         public static double distanceBetween(int xa, int ya, int xb, int yb)
         {
             return Math.Sqrt(Math.Pow((xb - xa), 2) + Math.Pow((yb - ya), 2));
