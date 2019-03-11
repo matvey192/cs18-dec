@@ -8,7 +8,21 @@ namespace CodeProject
     class Program
     {
         static void Main(string[] args)
-        {//2
+        {
+            Point a = new Point(31, 37);
+            a.c = "red";
+            Console.WriteLine(a);
+            Point p1 = new Point(11, 13);//( (Xa, Ya))
+            Point p2 = new Point(17, 19);// (Xb, Yb)   (Xb - Xa)2 + (Yb - Ya)2
+            Console.WriteLine("Расстояние между {0} и {1} составляет {2:F4}", p1, p2, Math.Sqrt(Math.Pow(p2.GetX() - p1.GetX(), 2) + Math.Pow(p2.GetY() - p1.GetY(), 2)));
+
+            Range rr = new Range();
+            rr.Init(10, 60);
+            Console.Write("Исходный интервал");
+            Console.WriteLine(rr);
+            
+
+            //2
             Methods.task1860("Знаниям");
             Methods.task1860("Умениям");
             Methods.task1860("Результату");

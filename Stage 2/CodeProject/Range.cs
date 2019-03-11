@@ -8,8 +8,23 @@ namespace CodeProject
 {
     public class Range
     {
-        public int from;
-        public int to;
+        private int from;
+        private int to;
+        public override bool Equals(object Object)
+        {
+            if (Object == null) return false;
+            if (GetType() != Object.GetType()) return false;
+            Range r = (Range)Object;
+            if (from == r.from && to == r.to) return true;
+            if (this == Object) return true;
+            return false;
+        }
+
+        public override string ToString()
+        {
+            return "["+this.from+";"+this.to+"]";
+        }
+
         public bool Intersects(int ar, int br)
         {
             int i = 0;
@@ -79,6 +94,15 @@ namespace CodeProject
                 }
             }
             return false;
+        }
+        public  void Init(int f, int t)
+        {
+            if (f>=t)
+            {
+                throw new ArgumentException("Error");
+            }
+            this.from = f;
+            this.to = t;
         }
     }
 }

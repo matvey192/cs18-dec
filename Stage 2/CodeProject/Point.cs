@@ -10,9 +10,14 @@ namespace CodeProject
         //1
         private double x;
         private double y;
+        public string c;
         public override bool Equals(object other)
         {
+            if (other == null) return false;
+            if (GetType() != other.GetType()) return false;
             if (this == other) return true;
+            Point point = (Point)other;
+            if (x == point.x && y == point.y&&c==point.c) return true;
             return false;
         }
         public static double distanceBetween(int xa, int ya, int xb, int yb)
@@ -45,10 +50,24 @@ namespace CodeProject
         {
             return this.y;
         }
+        public void setColor(string p)
+        {
+            this.c = p;
+        }
         public static bool AreSame(Point a , Point b)
         {
             if (a.x == b.x && a.y == b.y) { return true; }
             else return false;
+        }
+        public  Point(int a, int b)
+        {
+            this.x = a;
+            this.y = b;
+            this.c = "white";
+        }
+        public override string ToString()
+        {
+            return "("+this.x+"; "+this.y+"; "+this.c+")";
         }
     }
 }

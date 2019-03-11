@@ -12,8 +12,8 @@ namespace Testing_Project
             Direction direction;
             direction = new Direction();
             Point src, dest; // переменные класса Point
-            src = new Point(); // инициализация экземпляров класса 
-            dest = new Point();
+            src = new Point(10,10); // инициализация экземпляров класса 
+            dest = new Point(13,14);
             //1
             src.setCoordinates(10, 10);
             dest.setCoordinates(13,14);
