@@ -24,7 +24,21 @@ namespace CodeProject
         {
             return "["+this.from+";"+this.to+"]";
         }
+        //13
+        public  void shift(int a)
+        {
+            this.from = this.from + a;
+            this.to = this.to + a;
+        }
 
+        public  void squeeze(int a)
+        {
+            if (a > this.to)
+            {
+                throw new ArgumentException("Error");
+            }
+            this.to = this.to - a;
+        }
         public bool Intersects(int ar, int br)
         {
             int i = 0;

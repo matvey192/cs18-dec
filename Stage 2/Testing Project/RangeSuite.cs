@@ -7,6 +7,43 @@ namespace Testing_Project
     public class RangeSuite
     {
         [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void TangeTest13()
+        {
+            bool i;
+            Range p = new Range();
+            Range Et = new Range();
+            p.Init(3,5);
+            p.shift(7);
+            Et.Init(10, 12);
+            i = p.Equals(Et);
+            Assert.IsTrue(i);
+
+            p.Init(31,43);
+            p.shift(-6);
+            Et.Init(25,37);
+            i = p.Equals(Et);
+            Assert.IsTrue(i);
+
+            p.Init(10, 50);
+            p.squeeze(30);
+            Et.Init(10, 20);
+            i = p.Equals(Et);
+            Assert.IsTrue(i);
+
+            p.Init(23, 51);
+            p.squeeze(100);
+            Et.Init(10, 20);
+            i = p.Equals(Et);
+
+            p.Init(19, 29);
+            p.squeeze(-5);
+            Et.Init(19, 34);
+            i = p.Equals(Et);
+            Assert.IsTrue(i);
+        }
+
+        [TestMethod]
         public void IntersectsIntsTest()
         {
             bool res;

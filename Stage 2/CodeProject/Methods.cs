@@ -251,5 +251,21 @@ namespace CodeProject
             Res.temperature = temp;
             return Res;
         }
+        //15.2
+        public static List<int> Task8418(int a)
+        {
+            if (a <= 0)
+            {
+                throw new ArgumentException("Значение X должно быть положительным");
+            }
+            List<int> lst = new List<int>();
+            int i = 1;
+            while(i<=a)
+            {
+                if (a%i==0) { lst.Add(i); }
+                i++;
+            }
+            return lst;
+        }
     }
 }

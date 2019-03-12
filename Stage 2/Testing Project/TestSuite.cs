@@ -1,15 +1,49 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CodeProject;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 namespace Testing_Project
 {
     [TestClass]
     public class TestSuite
     {
+        //15.2
         [TestMethod]
-        public void TestMethod1()
+        public void Task8418Test()
         {
+            List<int> expected = new List<int>();
+            List<int> actual = new List<int>();
+            expected.Add(1);
+            expected.Add(2);
+            expected.Add(3);
+            expected.Add(6);
+            actual = Methods.Task8418(6);
+            CollectionAssert.AreEqual(expected, actual);
+
+            List<int> expected1 = new List<int>()
+            {
+                1 ,5 ,7 ,11, 35, 55, 77, 385
+            };
+            List<int> actual1 = new List<int>();
+            actual1 = Methods.Task8418(385);
+            CollectionAssert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldNotAcceptNegativeArg()
+        {
+            Methods.Task8418(-385);
+        }
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldNotAcceptZero()
+        {
+            Methods.Task8418(0);
+        }
+
         [TestMethod]
         public  void task4411test()
         {

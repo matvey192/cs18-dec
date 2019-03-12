@@ -74,5 +74,7 @@ namespace Testing_Project
             res = Point.AreSame(src, dest);
             Assert.IsFalse(res);
         }
-    }//12,11,14,16,17
+    }//lr14 18  , 19
+    // lr 15 
+    
 }
