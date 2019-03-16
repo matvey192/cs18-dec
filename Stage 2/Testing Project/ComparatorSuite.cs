@@ -7,6 +7,24 @@ namespace Testing_Project
     [TestClass]
     public class ComparatorSuite
     {
+        //15.4
+        [TestMethod]
+        public void Comparator4061SortTest()
+        {
+            List<int> expected = new List<int>()
+            {
+                1, -3, 5, 7, -10
+            };
+
+            List<int> actual = new List<int>()
+            {
+                -10, 1, -3, 7, 5
+            };
+            Comparator4061 cmp = new Comparator4061();
+            actual.Sort(cmp);
+            CollectionAssert.AreEqual(actual, expected);
+        }
+
         //15.3
         [TestMethod]
         public void Comparator8258Test()
@@ -46,6 +64,32 @@ namespace Testing_Project
             Comparator8258 cmp = new Comparator8258();
             actual.Sort(cmp);
             CollectionAssert.AreEqual(actual, expected);
+
+            List<int> expected1 = new List<int>()
+            {
+                6, 5, 7, 4, 8, 3, 9, 2, 10, 1, 0, -1, -2, -3, -4, -5
+            };
+
+            List<int> actual1 = new List<int>()
+            {
+                -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            };
+            Comparator8258 cmp1 = new Comparator8258();
+            actual1.Sort(cmp1);
+            CollectionAssert.AreEqual(actual1, expected1);
+
+            List<int> expected2 = new List<int>()
+            {
+                5, 5, 5, 5, 5
+            };
+
+            List<int> actual2 = new List<int>()
+            {
+                5, 5, 5, 5, 5
+            };
+            Comparator8258 cmp2 = new Comparator8258();
+            actual2.Sort(cmp2);
+            CollectionAssert.AreEqual(actual2, expected2);
 
         }
         //15.5
@@ -96,12 +140,14 @@ namespace Testing_Project
 
             List<int> expected3 = new List<int>()
             {
-       -49, -47, -55, -55, -60, -60, -39, -65, -28,16, -14, -12, 1, 4, 15, 22, 61, 66, 74, 80
+                -49, -47, -55, -55, -60, -60, -39, -65, -28,
+                -16, -14, -12, 1, 4, 15, 22, 61, 66, 74, 80
             };
 
             List<int> actual3 = new List<int>()
             {
-        -49, -55, -60, -60, 15, -28, 22, -16, 4, 61,74, -39, -55, -14, -12, 66, 80, -47, 1, -65
+                -49, -55, -60, -60, 15, -28, 22, -16, 4, 61,
+                 74, -39, -55, -14, -12, 66, 80, -47, 1, -65
             };
             Comparator7186 cmp3 = new Comparator7186();
             cmp3.p = -50;
