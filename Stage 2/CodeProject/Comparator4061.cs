@@ -12,24 +12,23 @@ namespace CodeProject
         override // Заменяем метод, реализованный в классе Comparer<int>
         int Compare(int a, int b)
         {
-            int res1 = 0;
-            int res2 = 0;
             if (Math.Abs(a) > Math.Abs(b))
             {
-                res1 = b;
-                res2 = a;
+                return 1;               // <0 если а меньше б
             }
             else if (Math.Abs(a) < Math.Abs(b))
             {
-                res1 = b;
-                res2 = a;
+                return -1;                    //>0 если а больше б 
             }
-            else if (Math.Abs(a) == Math.Abs(b))
+            else if (Math.Abs(a) == Math.Abs(b)) // если равны 0
             {
-                if (a > b) { res1 = b; res2 = a; }
-                else { res1 = a; res2 = b; }
+                if (a <0&&b>0) {
+                    return -1; }
+                else if(a > 0 && b < 0) {
+                    return 1; }
+                return 0;
             }
-            else return a;
+            else return 1;
         }
     }
 }

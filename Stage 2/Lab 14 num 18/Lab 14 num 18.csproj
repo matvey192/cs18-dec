@@ -88,5 +88,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CodeProject\CodeProject.csproj">
+      <Project>{fa702924-a331-457c-8475-f836e1e3c5c3}</Project>
+      <Name>CodeProject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

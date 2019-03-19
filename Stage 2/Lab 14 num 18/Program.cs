@@ -4,124 +4,66 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using CodeProject;
 namespace Lab_14_num_18
 {
     class Program
     {
         static void Main(string[] args)
         {
+            string er = "";
             string[] comm = new string[3];
-            //Исключения
-            string error = "<h2> Ошибка: Некорректный формат </h2>,";
-            string error1 = "<h2> Последнее корректное состояние: </h2>,";
-            int e1 = 0;
-            int e2 = 0;
-            int e3 = 0;
-            int e4 = 0;
-            int e5 = 0;
-
-            int x = 100;
+            Rect14 x = new Rect14();
+            int x1 = 100;
             int y = 100;
             int w = 100;
             int h = 100;
-            int x11 = 100;
-            int y1 = 100;
-            int w1 = 100;
-            int h1 = 100;
             int k = 0;
-            int resx = 0;
             string line = "";
-            string x1 = Console.ReadLine();
-            string ch = "task5032/test" + x1 + ".csv";
+            string x2 = Console.ReadLine();
+            string ch = "task5032/test" + x2 + ".csv";
             if (!File.Exists(ch))
             {
                 Console.WriteLine("Файл не существует");
+                return;
             }
             StreamReader sr = new StreamReader(ch);
             if (sr.EndOfStream) { Console.WriteLine("Файл пуст"); sr.Close(); }
             while (!sr.EndOfStream)
             {
-                line = sr.ReadLine();
-                comm = line.Split(';');
-                if (comm.Length == 1||comm.Length>=3)
+                try
                 {
-                    error = "<h2> Некорректный формат </h2>,";
-                    e5 = 1;
-                    goto brr;
+                    line = sr.ReadLine();
+                    comm = line.Split(';');
+                    if (comm.Length < 3) { throw new ArgumentException("Некорректный формат"); }
+                    else if (comm[0] == "shiftX")
+                    {
+                        x.ShiftX(comm[1]);
+                        k++;
+                    }
+                    else if (comm[0] == "shiftY")
+                    {
+                        x.ShiftY(comm[1]);
+                        k++;
+                    }
+                    else if (comm[0] == "stretchX")
+                    {
+                        x.stretchX(comm[1]);
+                        k++;
+                    }
+                    else if (comm[0] == "stretchY")
+                    {
+                        x.stretchY(comm[1]);
+                        k++;
+                    }
+                    else { throw new ArgumentException("Некорректное действие " + comm[1]); }
                 }
-                else if (comm[0] != "stretchX" && comm[0] != "stretchY" & comm[0] != "shiftX" & comm[0] != "shiftY")
+                catch (ArgumentException e)
                 {
-                    error = "<h2> Некорректное действие: " + comm[0] + " </h2>,";
-                    e5 = 1;
-                    goto brr;
-                }
-                if (comm[0] == "shiftX")
-                {
-                    resx = int.Parse(comm[1]);
-                    if(x<0)
-                    {
-                        error = "<h2> Ошибка: Координата X должна быть неотрицательной </h2>,";
-                        e1 = 1;
-                    }
-                    x = x + resx;
-                    k++;
-                    if (x <= 0 || y <= 0 || w <= 0 || h <= 0)
-                    {
-                        x = x - resx;
-                        goto brr;
-                    }
-                }
-                else if (comm[0] == "shiftY")
-                {
-                    resx = int.Parse(comm[1]);
-                    if (y < 0)
-                    {
-                        error = "<h2> Ошибка: Координата Y должна быть неотрицательной </h2>,";
-                        e2 = 1;
-                    }
-                    y = y + resx;
-                    k++;
-                    if (x <= 0 || y <= 0 || w <= 0 || h <= 0)
-                    {
-                        y = y - resx;
-                        goto brr;
-                    }
-                }
-                else if (comm[0] == "stretchX")
-                {
-                    resx = int.Parse(comm[1]);
-                    if (w < 0)
-                    {
-                        error = "<h2> Ошибка: Ширина должна быть положительной </h2>,";
-                        e3 = 1;
-                    }
-                    w = w + resx;
-                    k++;
-                    if (x <= 0 || y <= 0 || w <= 0 || h <= 0)
-                    {
-                        w = w - resx;
-                        goto brr;
-                    }
-                }
-                else if (comm[0] == "stretchY")
-                {
-                    resx = int.Parse(comm[1]);
-                    if (h < 0)
-                    {
-                        error = "<h2> Ошибка: Высота должна быть положительной </h2>,";
-                        e4 = 1;
-                    }
-                    h = h + resx;
-                    k++;
-                    if(x <= 0 || y <= 0 || w <= 0 || h <= 0)
-                    {
-                        h = h - resx;
-                        goto brr;
-                    }
+                    er = e.Message;
+                    Console.WriteLine(e.Message);
                 }
             }
-            brr:
-            if (e1 == 0 && e2 == 0 && e3 == 0 && e4 == 0 && e5 == 0)
             {
                 string name = "out.html";
                 StreamWriter write = new StreamWriter(name);
@@ -132,41 +74,16 @@ namespace Lab_14_num_18
 <head />
 <body >
 <h1 > Действий  ""{8}"" </ h1 >
-<h2> Результат: </h2>,
-
+<h1 >""{9}"" </h1>
 <svg width = ""800"" height = ""600"" >
 
     <rect x = ""{0}"" y=""{1}"" width = ""{2}"" height = ""{3}"" stroke=""black"" stroke-width=""4"" fill = ""white""opacity=""0.7"" />
     <rect x = ""{4}"" y=""{5}"" width = ""{6}"" height = ""{7}"" stroke=""red"" stroke-width=""4"" fill = ""white""opacity=""0.5"" />
 </svg >
 </body >
-</html >", x, y, w, h, x11, y1, w1, h1, k);
+</html >", x1, y, w, h ,x.x ,x.y ,x.w ,x.h,k,er);
                 write.Close();
                 System.Diagnostics.Process.Start(name);
-            }
-            else if (e1 == 1 || e2 == 1 || e3 == 1 || e4 == 1 || e5 == 1)
-            {
-                string name1 = "out1.html";
-                StreamWriter write1 = new StreamWriter(name1);
-                write1.WriteLine(@"<!DOCTYPE html>
-<html >
-<head >
-<meta charset = ""utf-8""/>
-<head />
-<body >
-<h1 > Действий  ""{8}"" </ h1 >
-""{9}""
-""{10}""
-
-<svg width = ""800"" height = ""600"" >
-
-    <rect x = ""{0}"" y=""{1}"" width = ""{2}"" height = ""{3}"" stroke=""black"" stroke-width=""4"" fill = ""white""opacity=""0.7"" />
-    <rect x = ""{4}"" y=""{5}"" width = ""{6}"" height = ""{7}"" stroke=""red"" stroke-width=""4"" fill = ""white""opacity=""0.5"" />
-</svg >
-</body >
-</html >", x, y, w, h, x11, y1, w1, h1, k, error, error1);
-                write1.Close();
-                System.Diagnostics.Process.Start(name1);
             }
             sr.Close();
         }

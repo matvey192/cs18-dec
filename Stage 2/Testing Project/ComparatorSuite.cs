@@ -23,6 +23,32 @@ namespace Testing_Project
             Comparator4061 cmp = new Comparator4061();
             actual.Sort(cmp);
             CollectionAssert.AreEqual(actual, expected);
+
+            List<int> expected1 = new List<int>()
+            {
+               -3, -3, -3, 3, 3, 3
+            };
+
+            List<int> actual1 = new List<int>()
+            {
+                3, -3, 3, -3, -3, 3
+            };
+            Comparator4061 cmp1 = new Comparator4061();
+            actual1.Sort(cmp1);
+            CollectionAssert.AreEqual(actual1, expected1);
+
+            List<int> expected2 = new List<int>()
+            {
+               0, -2, 2, 13, 25, -37, 10000
+            };
+
+            List<int> actual2 = new List<int>()
+            {
+                13, -2, 25, -37, 10000, 0, 2
+            };
+            Comparator4061 cmp2 = new Comparator4061();
+            actual2.Sort(cmp2);
+            CollectionAssert.AreEqual(actual2, expected2);
         }
 
         //15.3
