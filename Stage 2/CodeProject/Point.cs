@@ -8,8 +8,8 @@ namespace CodeProject
     public class Point
     {
         //1
-        private double x;
-        private double y;
+        public double x;
+        public double y;
         public string c;
         public override bool Equals(object other)
         {

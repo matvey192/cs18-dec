@@ -7,6 +7,16 @@ namespace Testing_Project
     [TestClass]
     public class ComparatorSuite
     {
+        //15.6
+        [TestMethod]
+        public void Comparator1457SortTest()
+        {
+            Point a = new Point(5,4);
+            double res;
+            PointComparator p = new PointComparator();
+            res=p.ComparatorP(a, 5, 7);
+
+        }
         //15.4
         [TestMethod]
         public void Comparator4061SortTest()

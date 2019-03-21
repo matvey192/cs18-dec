@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comparator1457 .cs" />
     <Compile Include="Comparator4061.cs" />
     <Compile Include="Comparator7186.cs" />
     <Compile Include="Comparator8258.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="LiquidPortion.cs" />
     <Compile Include="Methods.cs" />
     <Compile Include="Point.cs" />
+    <Compile Include="PointComparator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Range.cs" />

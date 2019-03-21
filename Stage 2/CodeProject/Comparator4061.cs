@@ -14,11 +14,11 @@ namespace CodeProject
         {
             if (Math.Abs(a) > Math.Abs(b))
             {
-                return 1;               // <0 если а меньше б
+                return 1;               // >0 если а меньше б меняем
             }
             else if (Math.Abs(a) < Math.Abs(b))
             {
-                return -1;                    //>0 если а больше б 
+                return -1;                    //<0 если а больше б 
             }
             else if (Math.Abs(a) == Math.Abs(b)) // если равны 0
             {
