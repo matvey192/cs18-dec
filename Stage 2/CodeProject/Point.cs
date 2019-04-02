@@ -8,8 +8,8 @@ namespace CodeProject
     public class Point
     {
         //1
-        public double x;
-        public double y;
+        public int x;
+        public int y;
         public string c;
         public override bool Equals(object other)
         {
@@ -19,6 +19,11 @@ namespace CodeProject
             Point point = (Point)other;
             if (x == point.x && y == point.y&&c==point.c) return true;
             return false;
+        }
+        public override int GetHashCode()
+        {
+            int c=  this.x + 31 * this.y+31 * this.c.GetHashCode();
+            return c;
         }
         public static double distanceBetween(int xa, int ya, int xb, int yb)
         {
