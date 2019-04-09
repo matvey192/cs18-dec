@@ -19,7 +19,7 @@ namespace A_star
         {
             return Math.Sqrt(Math.Pow(end.x - point.x, 2) + Math.Pow(end.y - point.y, 2));
         }
-        public static bool Astar(Pstar start, Pstar end)
+      /*  public static bool Astar(Pstar start, Pstar end)
         {
             List<Pstar> Q = new List<Pstar>(); // множество вершин, которые требуется рассмотреть
             List<Pstar> U = new List<Pstar>(); // множество рассмотренных вершин
@@ -36,7 +36,7 @@ namespace A_star
                 }
                 Q.Remove(current);
                 U.Add(current);
-                for ()
+                
             }
 
         }
@@ -69,7 +69,7 @@ namespace A_star
                 if v∉Q
                     Q.push(v)
     return false
-    */
-        }
+    
+        }*/
     }
 }
