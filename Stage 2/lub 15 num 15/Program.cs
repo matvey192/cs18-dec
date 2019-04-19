@@ -28,34 +28,26 @@ namespace lub_15_num_15
                 string[] line1 = line.Split(';');
                 try
                 {
-                    if (line1[0] == null||line1[1]==null||line[2]==null)
-                    {
-                        throw new FormatException();
-                    }
                     pts.Set1(int.Parse(line1[0]), int.Parse(line1[1]), line1[2]);
                 }
-                if (row.ContainsKey(pts))
-                {
-                    res = row[pts];
-                    res += 1;
-                    row.Remove(pts);
-                    row.Add(pts, res);
-                }
-                else
-                {
-                    row.Add(pts, 1);
-                }
-                  catch (FormatException e)
+                catch
                 {
                     err++;
+                    continue;
                 }
-                catch(ArgumentException e1)
-                {
-                    err++;
-                }
+                    if (row.ContainsKey(pts))
+                    {
+                        res = row[pts];
+                        res += 1;
+                        row.Remove(pts);
+                        row.Add(pts, res);
+                    }
+                    else
+                    {
+                        row.Add(pts, 1);
+                    }
             }
             sr.Close();
-
         }
     }
 }
