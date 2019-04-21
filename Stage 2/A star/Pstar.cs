@@ -10,14 +10,28 @@ namespace A_star
     {
         public int x;
         public int y;
+        public double g;
+        public double h;
+        public double f;
+        public Pstar CameFrom;
         public void set(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
-        public static double Ldis(int xa, int ya, int xb, int yb)
+       public override bool Equals(object other)
         {
-            return Math.Sqrt(Math.Pow((xb - xa), 2) + Math.Pow((yb - ya), 2));
+            if (other == null) return false;
+            if (GetType() != other.GetType()) return false;
+            if (this == other) return true;
+            Pstar point = (Pstar)other;
+            if (x == point.x && y == point.y) return true;
+            return false;
+        }
+        public override int GetHashCode()
+        {
+            int c = this.x + 31 * this.y;
+            return c;
         }
     }
 }

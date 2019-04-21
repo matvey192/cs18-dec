@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using A_star;
 namespace CodeProject
 {
     class Program
@@ -90,6 +91,7 @@ namespace CodeProject
             Console.WriteLine(res);
             //13/9
             Console.WriteLine(Methods.task5170(9));
+            
         }
     }
 }

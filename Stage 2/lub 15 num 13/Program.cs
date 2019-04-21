@@ -32,7 +32,7 @@ namespace lub_15_num_13
             Console.WriteLine(String.Join(",", map));
             List<string> map1 = map.Keys.ToList();
             map1.Sort();
-            foreach (string item in map1) // item = list[j] 
+            foreach (string item in map1) // item = map1[j] 
             {
                 Console.WriteLine(item+" "+map[item]);
             }
