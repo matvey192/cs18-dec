@@ -11,7 +11,7 @@ namespace A_star
         public static List<Pstar> FindPath(Pstar[,] mass, Pstar start, Pstar end)
         {
             Pstar start1 = new Pstar();
-            List<Pstar> Open = new List<Pstar>(); // множество вершин, которые требуется рассмотреть
+            HashSet<Pstar> Open = new HashSet<Pstar>(); // множество вершин, которые требуется рассмотреть
             List<Pstar> Close = new List<Pstar>(); // множество рассмотренных вершин
             Dictionary<Pstar, double> fucku = new Dictionary<Pstar, double>();
             start1.x = start.x;
@@ -33,12 +33,13 @@ namespace A_star
                 Close.Add(current);
                 foreach (var neig in neighbour(current,start,end,mass))
                 {
-                    if (Close.Count(node => node.x == neig.x) > 0&& Close.Count(node => node.y == neig.y) > 0)
+                    //Close.Count(filter);
+                    if (Close.Count(node => node.x == neig.x && node.y == neig.y) > 0)
                     {
                         continue;
                     }
-                    var openNode = Open.FirstOrDefault(node =>
-                    node.x == neig.x);
+
+                    var openNode = Open.FirstOrDefault(node => node.x == neig.x && node.y == neig.y);
                     if (openNode == null)
                     {
                         Open.Add(neig);
@@ -53,6 +54,12 @@ namespace A_star
             }
             return null;
         }
+
+        //public static bool filter(Pstar node)
+        //{
+        //    return node.x == 0;
+        //}
+
         // Коллекция точек до данной точки (Сам путь по точкам)
         public static List<Pstar> GetPath(Pstar node)
         {
@@ -76,21 +83,25 @@ namespace A_star
             ki.x = node.x;
             ki.y = node.y;
             ki.x = ki.x + 1;
+            ki.field = node.field;
             Points[0] = ki;
             Pstar ki1 = new Pstar();
             ki1.x = node.x;
             ki1.y = node.y;
             ki1.x = ki1.x - 1;
+            ki1.field = node.field;
             Points[1] = ki1;
             Pstar ki2 = new Pstar();
             ki2.x = node.x;
             ki2.y = node.y;
             ki2.y = ki2.y + 1;
+            ki2.field = node.field;
             Points[2] = ki2;
             Pstar ki3 = new Pstar();
             ki3.x = node.x;
             ki3.y = node.y;
             ki3.y = ki3.y - 1;
+            ki3.field = node.field;
             Points[3] = ki3;
             foreach (var point in Points)
             {
@@ -100,6 +111,10 @@ namespace A_star
                     continue;
                 }
                 if (point.y < 0 || point.y >= Arr.GetLength(1)) // столбцы
+                {
+                    continue;
+                }
+                if (point.field == true) // Not found
                 {
                     continue;
                 }

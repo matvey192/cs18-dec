@@ -13,7 +13,12 @@ namespace A_star
         public double g;
         public double h;
         public double f;
+        public bool field;
         public Pstar CameFrom;
+        public override string ToString()
+        {
+            return "(" + this.x + "; " + this.y +")";
+        }
         public void set(int x, int y)
         {
             this.x = x;

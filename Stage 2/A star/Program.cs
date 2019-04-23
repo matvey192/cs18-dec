@@ -34,13 +34,20 @@ namespace A_star
                     Arr[x, y] = kes;
                 }
             }
+            Pstar Field = new Pstar();
+            Field.set(1, 1);
+            Field.field = true;
+            Arr[1, 1] = Field;
             Pstar start = new Pstar();
             Pstar end = new Pstar();
             start.x = 0;
             start.y = 0;
             end.x = 2;
             end.y = 2;
-            PathFinder.FindPath(Arr, start, end);
+           foreach( var path in PathFinder.FindPath(Arr, start, end))
+            {
+                Console.WriteLine(path);
+            }
         }
     }
 }
