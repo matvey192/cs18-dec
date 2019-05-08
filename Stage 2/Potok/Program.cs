@@ -15,21 +15,22 @@ namespace Potok
             int i = 0;
             int[] nums = new int[] { 1, 2, 3, 4, 5, 6 };
             string[] words = new string[] { " num "," num1 ", " num2 "," num3 "," num4 " };
-            for( ; ; ) // Выполняются одновременно
+            while(i<words.Length) // Выполняются одновременно
             {
                 Thread.Sleep(1);
-                Console.WriteLine(words[0]);
+                Console.WriteLine(words[i]);
+                i++;
             }
         }
         public static void proces()
         {
             int i = 0;
             int[] nums = new int[] { 1, 2, 3, 4, 5, 6 };
-            for(; ; )
+            while(i<nums.Length)
             {
                 Thread.Sleep(1);
-                Console.WriteLine(nums[0]);
-                
+                Console.WriteLine(nums[i]);
+                i++;
             }
         }
     }
