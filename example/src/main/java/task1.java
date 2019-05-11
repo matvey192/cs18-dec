@@ -1,9 +1,7 @@
+import java.util.Scanner;
 import org.joda.time.*;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
-
-import java.util.Scanner;
-
 public class task1 {
     public static void main (String[] args)
     {

@@ -1,8 +1,8 @@
+import java.util.Scanner;
 import org.joda.time.*;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
-import java.util.Scanner;
 public class task2 {
     public  static  void main (String[] args)
     {
@@ -11,8 +11,6 @@ public class task2 {
         System.out.println(date.print(current));  // выводим отформатированную дату
         System.out.println(current);
 
-        // task2
-        // текущая дата получаем полночь
         DateTime current1 = new DateTime();
         Scanner day = new Scanner(System.in);
         String kk = day.nextLine();
