@@ -34,10 +34,15 @@ namespace A_star
                     Arr[x, y] = kes;
                 }
             }
+            Console.WriteLine(Arr.GetLength(1));
             Pstar Field = new Pstar();
             Field.set(1, 1);
             Field.field = true;
             Arr[1, 1] = Field;
+            Pstar Field1 = new Pstar();
+            Field1.set(0, 1);
+            Field1.field = true;
+            Arr[0, 1] = Field;
             Pstar start = new Pstar();
             Pstar end = new Pstar();
             start.x = 0;

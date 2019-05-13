@@ -73,35 +73,60 @@ namespace A_star
             res.Reverse();
             return res;
         }
-
         // Коллекция соседних точек 
         public static List<Pstar> neighbour(Pstar node,Pstar start, Pstar End, Pstar[,] Arr)
         {
             List<Pstar> res = new List<Pstar>();
             Pstar[] Points = new Pstar[4];
             Pstar ki = new Pstar();
+            int X = 0;
+            int Y = 0;
+            X = node.x;
+            Y = node.y;
             ki.x = node.x;
             ki.y = node.y;
             ki.x = ki.x + 1;
-            ki.field = node.field;
+            if (ki.x >= 0 && ki.x < Arr.GetLength(0) )
+            {
+                if (ki.y >= 0 && ki.y < Arr.GetLength(1))
+                { ki.field = Arr[ki.x, ki.y].field; }
+            }
             Points[0] = ki;
             Pstar ki1 = new Pstar();
             ki1.x = node.x;
             ki1.y = node.y;
             ki1.x = ki1.x - 1;
-            ki1.field = node.field;
+            if (ki1.x >= 0 && ki1.x < Arr.GetLength(0))
+            {
+                if (ki1.y >= 0 && ki1.y < Arr.GetLength(1))
+                {
+                    ki1.field = Arr[ki1.x, ki1.y].field;
+                }
+            }
             Points[1] = ki1;
             Pstar ki2 = new Pstar();
             ki2.x = node.x;
             ki2.y = node.y;
             ki2.y = ki2.y + 1;
-            ki2.field = node.field;
+            if (ki2.x >= 0 && ki2.x < Arr.GetLength(0))
+            {
+                if (ki2.y >= 0 && ki2.y < Arr.GetLength(1))
+                {
+                    ki2.field = Arr[ki2.x, ki2.y].field;
+                }
+            }
             Points[2] = ki2;
             Pstar ki3 = new Pstar();
             ki3.x = node.x;
             ki3.y = node.y;
             ki3.y = ki3.y - 1;
-            ki3.field = node.field;
+            if (ki3.x >= 0 && ki3.x < Arr.GetLength(0))
+            {
+                if (ki3.y >= 0 && ki3.y < Arr.GetLength(1))
+                {
+                    ki3.field = Arr[ki3.x, ki3.y].field;
+                }
+            }
             Points[3] = ki3;
             foreach (var point in Points)
             {
