@@ -39,13 +39,13 @@ public class task4 {
         long f = 0; // кол-во воскресений между датами
 
         // проверка начала и конца даты
-        if(true_s == true&&true_e==true){
+        if(true_s &&true_e){
             i+=2;
         }
-        else if (true_e==true){
+        else if (true_e){
             i+=1;
         }
-        else if (true_s==true){
+        else if (true_s){
             i+=1;
         }
         f = (dif-i) / 7; // кол-во дней минус уже имющиеся воскресенья
