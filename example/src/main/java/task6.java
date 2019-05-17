@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class task6 {
     public static void main(String[] args) {
         DateTimeFormatter work = DateTimeFormat.forPattern("dd,MM,yyyy");
-        DateTimeFormatter work1 = DateTimeFormat.forPattern("dd");
         // Ввод
         Scanner date = new Scanner(System.in);
         String start1 = date.nextLine();
@@ -37,57 +36,32 @@ public class task6 {
         String end3 = date3.nextLine();
 
         DateTime end4 = work.parseDateTime(end3);
-        int res=0;
+        int st =0;
+        int end =0;
 
         int days_e2 = end4.getDayOfMonth();
         int month_e2 = end4.getMonthOfYear();
         if (month_s1 == month_s2 || month_e1 == month_e2)
         {
-            // Если точки совпадают
-            if(days_s1==days_s2)
+            if(days_s1>days_s2&&days_s1<days_e2)
             {
-                res = days_s1;
+                st = days_s1;
             }
-            else if(days_e1==days_e2)
+            else if(days_s2>days_s1&&days_s2<days_e1)
             {
-                res= days_e1;
+                st = days_s2;
             }
-            // Если начальные точки больше
-            if(days_s1>days_s2)
+
+            if(days_e1>days_s1&&days_e1<days_e2)
             {
-                while (days_s1!=days_s2)
-                {
-                    days_s1 -=1;
-                }
-                res=days_s1;
+                end =days_e1;
             }
-            else if(days_e1>days_s2)
+            else if (days_e2>days_s1&&days_e2<days_e1)
             {
-                while (days_e1!=days_e2)
-                {
-                    days_e1-=1;
-                }
-                res = days_e1;
-            }
-            // Если начальные точки меньше
-            if(days_s1<days_s2)
-            {
-                while (days_s1!=days_s2)
-                {
-                    days_s1 +=1;
-                }
-                res=days_s1;
-            }
-            else if(days_e1<days_s2)
-            {
-                while (days_e1!=days_e2)
-                {
-                    days_e1+=1;
-                }
-                res=days_e1;
+                end = days_e2;
             }
         }
-        System.out.println("День пересечения дат "+res);
+        System.out.println("День начала пересечения дат "+st+" День конца пересечения "+end);
     }
     // Даны 4(2интервала) даты нужно определеить. пересекаются они или нет, если да, то в какой момент.
     // Начало и конец, неправильный вывод

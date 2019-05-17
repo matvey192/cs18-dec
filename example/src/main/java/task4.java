@@ -39,7 +39,7 @@ public class task4 {
         long f = 0; // кол-во воскресений между датами
 
         // проверка начала и конца даты
-        if(true_s &&true_e){
+        if(true_s && true_e){
             i+=2;
         }
         else if (true_e){
