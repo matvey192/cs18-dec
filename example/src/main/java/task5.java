@@ -27,6 +27,7 @@ public class task5 {
 
         int days1 = vod12.getDayOfMonth();
 
+
         int[] jan = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 19, 20, 26, 27}; //1
         int[] feb = new int[]{2, 3, 9, 10, 16, 17, 23, 24}; //2
         int[] march = new int[]{2, 3, 8, 9, 10, 16, 17, 23, 24, 30, 31}; //3
@@ -40,220 +41,51 @@ public class task5 {
         int[] nov = new int[]{2, 3, 4, 9, 10, 16, 17, 23, 24, 30}; //11
         int[] dec = new int[]{1, 7, 8, 14, 15, 21, 22, 28, 29}; //12
 
-        long res = 0; // ответ
+        int[][] months1 = new int[][]{jan,feb,march,apr,may,june,july, aug,sep,okt,nov,dec};
+        List<Integer> days_w = new ArrayList<Integer>();
+
+        days_w.add(27); //24,31,28,26,30,28,31,29,27,30,29
+        days_w.add(24);
+        days_w.add(31);
+        days_w.add(28);
+        days_w.add(26);
+        days_w.add(30);
+        days_w.add(28);
+        days_w.add(31);
+        days_w.add(29);
+        days_w.add(27);
+        days_w.add(30);
+        days_w.add(29);
+
+
+        long res ; // ответ
+
+        int i=0; // счёт месяцев
 
         int i1 = 0;
         int work1 = 0; // выходные
-        while (days!=days1)
+        while (days!=days1) // пока не конец
         {
-            if(month==1)
+            if(month==i)
             {
-                if (days>31)
+                if(days_w.indexOf(days)==i)
                 {
                     month++;
-                    days=1;
-                    continue;
+                    days=0;
                 }
-                while (i1 < jan.length)
+                while (i1<months1[i].length)
                 {
-                    if (days == jan[i1])
+                    if(days==months1[i][i1])
                     {
                         work1++;
                     }
                     i1++;
                 }
+                days++;
             }
-            else if(month==2)
-            {
-                if (days>28)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < feb.length)
-                {
-                    if (days == feb[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==3)
-            {
-                if (days>31)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < march.length)
-                {
-                    if (days == march[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==4)
-            {
-                if (days>30)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < apr.length)
-                {
-                    if (days == apr[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==5)
-            {
-                if (days>31)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < may.length)
-                {
-                    if (days == may[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==6)
-            {
-                if (days>30)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < june.length)
-                {
-                    if (days == june[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==7)
-            {
-                if (days>31)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < july.length)
-                {
-                    if (days == july[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==8)
-            {
-                if (days>31)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < aug.length)
-                {
-                    if (days == aug[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==9)
-            {
-                if (days>30)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < sep.length)
-                {
-                    if (days == sep[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==10)
-            {
-                if (days>31)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < okt.length)
-                {
-                    if (days == okt[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==11)
-            {
-                if (days>30)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < nov.length)
-                {
-                    if (days == nov[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            else if(month==12)
-            {
-                if (days>31)
-                {
-                    month++;
-                    days=1;
-                    continue;
-                }
-                while (i1 < dec.length)
-                {
-                    if (days == dec[i1])
-                    {
-                        work1++;
-                    }
-                    i1++;
-                }
-            }
-            i1=0;
-            days++;
-            res = dif- work1;
-        }
+            i++;
+        }  // Отладить дома
+        res = dif - work1;
         System.out.println("Рабочих дней "+res);
     }
 }

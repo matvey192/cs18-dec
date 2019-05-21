@@ -3,7 +3,7 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 import java.util.Scanner;
-public class task6 {
+public class  task6 {
     public static void main(String[] args) {
         DateTimeFormatter work = DateTimeFormat.forPattern("dd,MM,yyyy");
         // Ввод
@@ -15,25 +15,21 @@ public class task6 {
         int days_s1 = start2.getDayOfMonth();
         int month_s1 = start2.getMonthOfYear();
 
-        // Ввод
-        Scanner date1 = new Scanner(System.in);
-        String end1 = date1.nextLine();
+        String end1 = date.nextLine();
         DateTime end2 = work.parseDateTime(end1);
 
         int days_e1 = end2.getDayOfMonth();
         int month_e1 = end2.getMonthOfYear();
 
         // Ввод
-        Scanner date2 = new Scanner(System.in);
-        String start3 = date2.nextLine();
+        String start3 = date.nextLine();
         DateTime start4 = work.parseDateTime(start3);
 
         int days_s2 = start4.getDayOfMonth();
         int month_s2 = start4.getMonthOfYear();
 
         // Ввод
-        Scanner date3 = new Scanner(System.in);
-        String end3 = date3.nextLine();
+        String end3 = date.nextLine();
 
         DateTime end4 = work.parseDateTime(end3);
         int st =0;
