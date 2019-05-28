@@ -19,7 +19,7 @@ public class HtmlController2 implements HttpHandler {
             return;
         }
         String filePath = address.getFile(); // Путь к файлу
-        String out1 = "";
+        String out1;
 
         FileInputStream fstream = new FileInputStream(filePath);
         BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
